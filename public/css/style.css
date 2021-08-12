@@ -1,0 +1,259 @@
+:root {
+  --main-bg: #34495e;
+  --main-color: #16a085;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* start header part */
+.header {
+  background: var(--main-bg);
+}
+.row {
+  margin: 0;
+}
+.navImg {
+  display: flex;
+}
+.navbar a {
+  color: white;
+}
+.navbar a:hover {
+  color: var(--main-color);
+}
+.navbar-brand {
+  font-size: 30px;
+}
+.navbar a span {
+  color: var(--main-color);
+}
+.navbar a span i {
+  animation: navIcon 3s linear infinite;
+}
+.nav-item {
+  margin-left: 10px;
+}
+.navbar-toggler {
+  background-color: white;
+  border: 1px solid transparent;
+  padding: 2px;
+  border-radius: 5px;
+}
+.navbar-toggler-icon i {
+  color: var(--main-color);
+  font-size: 24px;
+}
+.active {
+  color: var(--main-color) !important;
+}
+
+@keyframes navIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* start slider part */
+.carousel-item img {
+  width: 100%;
+  margin: auto;
+  height: 300px;
+  border-radius: 5px;
+}
+.slider-left {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.slider-left p {
+  color: gray;
+}
+.slider-left h2 {
+  color: rgb(79, 76, 76);
+  font-size: 40px;
+  text-transform: uppercase;
+}
+.slider-left h2 span {
+  color: var(--main-color);
+}
+.slider-left button {
+  background-color: var(--main-color);
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  color: white;
+}
+.slider-left button:hover {
+  background-color: white;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+.slider-right {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* page not found page */
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.mainContent p {
+  color: black;
+  font-size: 30px;
+}
+
+/* footer section Start */
+.footer {
+  background-color: rgb(36, 35, 35);
+  line-height: 3em;
+  margin-top: auto;
+}
+.footer p {
+  text-align: center;
+  color: white;
+}
+
+/* About page start */
+.about-left {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.about-left img {
+  height: 400px;
+  width: 350px;
+  filter: drop-shadow(4px 4px 4px gray);
+}
+.about-right {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.about-right p {
+  color: gray;
+}
+.about-right h2 {
+  color: rgb(79, 76, 76);
+  font-size: 40px;
+  text-transform: uppercase;
+}
+.about-right h2 span {
+  color: var(--main-color);
+}
+.about-right button {
+  background-color: var(--main-color);
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  color: white;
+}
+.about-right button:hover {
+  background-color: white;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+
+/* 
+media query for responsive */
+
+@media (max-width: 768px) {
+  .slider-left {
+    height: auto;
+    margin-bottom: 30px;
+  }
+  .slider-right {
+    height: auto;
+    margin-bottom: 30px;
+  }
+  .about-right {
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .about-left {
+    height: auto;
+    margin-top: 30px;
+  }
+}
+
+/* weather page style */
+.weather #cityName {
+  width: 100%;
+  margin: auto;
+  background: #34495e;
+  border: 1px solid transparent;
+  border-radius: 3rem;
+  padding: 10px 15px;
+  color: white;
+}
+.weather #cityName:focus {
+  outline: none;
+}
+#cityName::placeholder {
+  color: rgb(225, 224, 224);
+}
+.weather form {
+  margin-top: 40px;
+  position: relative;
+}
+.weather #search {
+  border: none;
+  border-radius: 3rem;
+  background-color: var(--main-color);
+  color: white;
+  padding: 7px 10px;
+  position: absolute;
+  bottom: 4px;
+  right: 5px;
+}
+
+.resultBox {
+  width: 450px;
+  margin: 30px auto;
+  background-color: #34495e;
+  border-radius: 15px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 22px;
+}
+.bottomLayer h3 {
+  color: rgb(220, 218, 215);
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+.temp_info {
+  display: flex;
+  justify-content: space-around;
+}
+.temp_info p {
+  font-size: 50px;
+  font-weight: 900;
+}
+.temp_info i {
+  font-size: 60px;
+}
